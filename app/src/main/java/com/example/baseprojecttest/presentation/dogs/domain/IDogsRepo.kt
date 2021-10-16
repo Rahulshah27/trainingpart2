@@ -1,10 +1,12 @@
 package com.example.baseprojecttest.presentation.dogs.domain
 
-import com.example.baseprojecttest.presentation.dogs.model.Breeds
-import com.example.baseprojecttest.presentation.dogs.model.DogsBreedImage
-import kotlinx.coroutines.flow.Flow
+import com.example.baseprojecttest.data.model.ResultOf
+import com.example.baseprojecttest.presentation.dogs.model.Dogs
 
 interface IDogsRepo {
-    suspend fun getAllDogsBreed(): Breeds
-    suspend fun getDogsImage(breedName:String): DogsBreedImage
+    suspend fun getAllDogsBreedAsync(): ResultOf<List<Dogs>>
+    suspend fun getAllDogsAndImageList():ResultOf<List<Dogs>>
+
+//    suspend fun getAllDogsBreed(): Breeds
+//    suspend fun getDogsImage(breedName:String): DogsBreedImage
 }
