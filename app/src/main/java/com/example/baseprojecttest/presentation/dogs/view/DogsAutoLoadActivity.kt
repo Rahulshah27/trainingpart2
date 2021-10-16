@@ -34,6 +34,7 @@ class DogsAutoLoadActivity : AppCompatActivity() {
                 is ResultOf.Success -> {
                     it?.let {
                         it.value[0].let {
+
                             tv1.text = it.breed
                             it.imageUrl?.let { it1-> GlideApp.with(this).load(it1).into(iv1) }
                         }
